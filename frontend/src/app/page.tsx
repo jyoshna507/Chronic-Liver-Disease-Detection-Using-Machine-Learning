@@ -35,7 +35,7 @@ const AnalysisDashboard = () => {
         metrics: selectedModel === 1
           ? { DICE: 0.98, IoU: 0.95, Precision: 0.992, Recall: 0.991 }
           : { DICE: 0.984, Jaccard: 0.92, IoU: 0.02, Precision: 0.95, Recall: 0.94 },
-        image_base64: "https://via.placeholder.com/512x512/0f172a/10b981?text=Liver+Segmentation+Visualizer"
+        image_base64: URL.createObjectURL(uploadedFile)
       });
     } finally {
       setLoading(false);
